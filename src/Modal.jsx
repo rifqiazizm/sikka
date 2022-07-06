@@ -1,10 +1,10 @@
 import React from 'react'
-import { Content, Row, Col, Button } from 'adminlte-2-react'
+import { Content, Row, Col, Button, Box } from 'adminlte-2-react'
 
 
 const Modal = () => {
   return (
-    <Content modal>
+    <Content modal show modalCloseButton  >
         <Row>
             <Col sm={2}></Col>
             <Col sm={8}>

@@ -3,7 +3,10 @@ import AdminLTE, { Sidebar, Content, Row, Col, Box, Button } from 'adminlte-2-re
 
 import './App.css';
 import Home from './Home';
-import { Modal } from 'react-bootstrap';
+import Modal from './Modal';
+import Mutasi from './Mutasi';
+
+// import { Modal } from 'react-bootstrap';
 
 
 const { Item } = Sidebar;
@@ -32,8 +35,10 @@ class HelloWorld extends Component {
 class App extends Component {
 
   sidebar = [
-    <Item key="hello" text="Hello" to="/app" />,
-    <Item key="home" text="home" to="/home" />
+    <Item key="home" text="home" to="/" />,
+    <Item key="hello" text="Hello" to="/modal" />,
+    <Item key="mutasy" text="mutasi" to="/mutasi" />
+
 
   ]
 
@@ -41,7 +46,9 @@ class App extends Component {
     return (
       <AdminLTE title={["Hello", "World"]} titleShort={["He", "we"]} theme="blue" sidebar={this.sidebar}>
         <HelloWorld path="/hello-world" />
-        <Home path="/" />
+        <Home exact path="/" />
+        <Modal path="/modal" />
+        <Mutasi path="/mutasi" />
       
       </AdminLTE>
     );
